@@ -35,6 +35,8 @@ source ~/.bashrc
 * `joy`: Starts `acl_joy joy.launch` in ROS1, you need to provide a veh and num. (e.g., `joy HX 21`)
 * `ros1`: Starts a ROS1 session so you can use ROS1 tools like `rostopic`, `rosbag`, etc. Container's home folder mapped to `/ros1_ws/$USER` on host system. (e.g., `ros1`)
 * `bridge`: Starts a `ros1 <-> ros2` bridge using ROS1 Noetic and ROS2 Foxy. (e.g., `bridge`)
+* `xyzrpy`: Starts `mocap_display.py` on all current mocap `/*/world` topics, displaying x,y,z position and roll,pitch,yaw orientation. Adding a number after the command changes the update rate (defaults to `xyzrpy 4` for 4Hz).
+* `xyy`: Starts `mocap_display.py` on all current mocap `/*/world` topics, displaying x,y position and yaw orientation. Adding a number after the command changes the update rate (defaults to `xyy 4` for 4Hz).
 
 * Note: You should not need to build the Docker images if you're on `aldrin`. That being said, you can build each image by navigating to each directory `./docker/*` and running `./build.sh` locally.
 
