@@ -32,6 +32,7 @@ source ~/.bashrc
 
 ## Aliases
 * `mocap`: Starts `mocap vicon.launch` in ROS1. (e.g., `mocap`)
+* `mocap_optitrack`: Starts `mocap optitrack.launch` in ROS1 -- needed for using the full mocap space. (e.g., `mocap_optitrack`)
 * `joy`: Starts `acl_joy joy.launch` in ROS1, you need to provide a veh and num. (e.g., `joy HX 21`)
 * `ros1`: Starts a ROS1 session so you can use ROS1 tools like `rostopic`, `rosbag`, etc. Container's home folder mapped to `/ros1_ws/$USER` on host system. (e.g., `ros1`)
 * `bridge`: Starts a `ros1 <-> ros2` bridge using ROS1 Noetic and ROS2 Foxy. (e.g., `bridge`)
@@ -76,3 +77,16 @@ To Turn on Hex, plug in battery:
 
 Always charge with "LiPo Balanced Mode - 3.3A 14.8V"
 Long press Enter to accept setting and press Enter again to start charging
+
+## Mocap Ethernet Configurations
+
+`aldrin` currently has 3 concurrent ethernet connections to manage:
+
+### MIT Network Configuration (External Internet)
+![](./assets/MIT_config.png)
+
+### RAVEN Network Configuration (Vicon + Drone WIFI)
+![](./assets/RAVEN_config.png)
+
+### OptiTrack Network Configuration (OptiTrack Output)
+![](./assets/OptiTrack_config.png)
