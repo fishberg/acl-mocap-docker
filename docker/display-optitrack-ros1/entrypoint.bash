@@ -16,4 +16,4 @@ else
     RATE="-r $2"
 fi
 
-/mocap_display.py $(rostopic list | grep -E "\/([^\/ ]+)\/world$" | cut -d "/" -f 2 | xargs) $DIM $RATE
+/mocap_display.py $(rostopic list | grep -E "/\optitrack\/([^\/ ]+)\/world$" | cut -d "/" -f 3 | xargs) $DIM $RATE
